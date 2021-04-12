@@ -1,1 +1,0 @@
-# linux_project_online_shopping
