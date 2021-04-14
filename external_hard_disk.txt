@@ -1,0 +1,4 @@
+SanDisk_Extr_SSD_1TB=158.99
+Seagate_2TB_USb3.1_TA=62.99
+LaCie_Rugged_5TB_USB=189.99
+Toshiba_Canvi_1TB_USB=39.99
