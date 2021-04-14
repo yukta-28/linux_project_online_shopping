@@ -1,0 +1,4 @@
+AMD_Ryzen_5_5600_X=299.99
+AMD_Rysen_5_3600_X=199.99
+Intel_Core_i7-10700k=279.99
+Intel_Core_i9-10850k=429.99

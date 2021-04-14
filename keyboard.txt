@@ -1,0 +1,3 @@
+Logitech_G613=54.99
+Logitech_G815=151.99
+Apple_Magic=117.60

@@ -4,17 +4,25 @@ function Assign_array(){
 
 #$1 -> Product no
 
-if [ $1 == 1 ]
-then  cost=("${key_price[@]}")
-      model_no=("${key_model[@]}")
-elif [ $1 == 2 ]
-then	
-      cost=("${disk_price[@]}")
-      model_no=("${disk_model[@]}")
-fi
+case $1 in
+      1)cost=("${key_price[@]}")
+        model_no=("${key_model[@]}");;
+      2)cost=("${disk_price[@]}")
+        model_no=("${disk_model[@]}");;
+      3)cost=("${monitor_price[@]}")
+        model_no=("${monitor_model[@]}");;
+      4)cost=("${video_price[@]}")
+        model_no=("${video_model[@]}");;
+      5)cost=("${processor_price[@]}")
+        model_no=("${processor_model[@]}");;
+      6)cost=("${printer_price[@]}")
+        model_no=("${printer_model[@]}");;
+      7)cost=("${mother_price[@]}")
+        model_no=("${mother_model[@]}");;
+
+esac
+
 }
-
-
 
 #*******************************************
 # add product to cart array
@@ -47,6 +55,7 @@ read -p "Select action >> " action
 case $action in
         1)List_Products;;
 	2)View_Cart;;
+	  
 esac
 
 }	  
@@ -55,6 +64,8 @@ esac
 # View Cart with subtotal 
 
 View_Cart(){
+
+clear
 
 figlet -c Your Cart
 
@@ -74,7 +85,7 @@ for item in "${cart_item[@]}"
      
      qty=$(($qty + ${cart_quantity[i]}))
 
-subtotal=`echo $subtotal + ${cart_price[i]}*${cart_quantity[i]} | bc`
+     subtotal=`echo $subtotal + ${cart_price[i]}*${cart_quantity[i]} | bc`
      ((i++))
      ((count++))
      done
@@ -172,12 +183,6 @@ clear
 echo "*********************************"
 echo "        Checkout Summary"
 echo "*********************************"
-
-
-
-#printf '%s\n' "--------------------------------------------------------"
-#printf '%s\t\t\t%s\t%s\n' "Item" "Quantity" "Price"
-#printf '%s\n' "--------------------------------------------------------"
 
 echo "Subtotal($qty items) is $subtotal"
 total $subtotal
