@@ -4,7 +4,7 @@ source ./ecomp_functions.sh
 clear
 
 echo -e "\n"
-figlet -c -f emboss2 Ecomp Arsenal
+figlet -c -f slant Ecomp Arsenal
 echo "                     Computers & Electronics Online Store"
 echo "                **********************************************"
 echo                                     

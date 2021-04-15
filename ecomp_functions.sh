@@ -203,7 +203,7 @@ read -p "Select action >> " action
 case $action in
         1)Delete_Item;;
         2)View_Cart;;
-        3)List_product;;
+        3)List_Products;;
         4)echo "Thank You for shopping with us"
 	  exit;;
 	*)echo -e "Invalid entry : Redirecting back to List of Products\n\n"
@@ -308,7 +308,7 @@ printf '%s\n\n' "----------------------------------------------------------"
 
 echo "Pickup Address:" 
 echo "Ecomp Store"
-echo "420 Lane"
+echo "420 Elite lane"
 echo "Fairfax"
 echo "VA-12345"
 printf '%s\n\n' "----------------------------------------------------------"
