@@ -1,98 +1,13 @@
 #!/bin/bash
-./esportarsenalheader.sh
+source esportarsenal_Initialize.sh
+source esportarsenal_Subheader.sh
+source esportarsenal_Choose.sh
 
-#declare -a CPU
-#declare -a Mobo
-#declare -a GPU
-#declare -a RAM
-#declare -a PSU
-#declare -a Case
-#declare -a SSD
-#declare -a OS
-#declare -a CPU_cost
-#declare -a MOBO_cost
-#declare -a GPU_cost
-#declare -a RAM_cost
-#declare -a PSU_cost
-#declare -a Case_cost
-#declare -a SSD_cost
-#declare -a OS_cost
-#declare -a Part_name_array
-#declare -a Part_cost_array
-Part_name_array=("" "" "" "" "" "" "" "")
-Part_cost_array=(0 0 0 0 0 0 0 0)
-
-i=0
-while IFS="," read -r rec_column1 rec_column2
-do
-CPU[i]=$rec_column1
-CPU_cost[i]=$rec_column2
-((i=i+1))
-done < CPU.csv
-
-i=0
-while IFS="," read -r rec_column1 rec_column2
-do
-Mobo[i]=$rec_column1
-Mobo_cost[i]=$rec_column2
-((i=i+1))
-done < Mobo.csv
-
-i=0
-while IFS="," read -r rec_column1 rec_column2
-do
-GPU[i]=$rec_column1
-GPU_cost[i]=$rec_column2
-((i=i+1))
-done < GPU.csv
-
-i=0
-while IFS="," read -r rec_column1 rec_column2
-do
-RAM[i]=$rec_column1
-RAM_cost[i]=$rec_column2
-((i=i+1))
-done < RAM.csv
-
-i=0
-while IFS="," read -r rec_column1 rec_column2
-do
-PSU[i]=$rec_column1
-PSU_cost[i]=$rec_column2
-((i=i+1))
-done < PSU.csv
-
-i=0
-while IFS="," read -r rec_column1 rec_column2
-do
-Case[i]=$rec_column1
-Case_cost[i]=$rec_column2
-((i=i+1))
-done < Case.csv
-
-i=0
-while IFS="," read -r rec_column1 rec_column2
-do
-SSD[i]=$rec_column1
-SSD_cost[i]=$rec_column2
-((i=i+1))
-done < SSD.csv
-
-i=0
-while IFS="," read -r rec_column1 rec_column2
-do
-OS[i]=$rec_column1
-OS_cost[i]=$rec_column2
-((i=i+1))
-done < OS.csv
-
-source Subheader.sh
-source Choose.sh
-
+./esportarsenal_Header.sh
 Subheader
 Choose
 
-./esportarsenalheader.sh
+./esportarsenal_Header.sh
 Subheader
 
 #Category=0
@@ -104,11 +19,11 @@ then
 Part_name_array[Category]=""
 Part_cost_array[Category]=0
 fi
-./esportarsenalheader.sh
+./esportarsenal_Header.sh
 Subheader
 Choose
 done
 
-./esportarsenalheader.sh
+./esportarsenal_Header.sh
 Subheader
-source ./esportarsenalship.sh
+source ./esportarsenal_Ship.sh
