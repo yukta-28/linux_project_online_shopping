@@ -57,6 +57,8 @@ echo "New cart total: $New_cart_total"
 echo "Cart total with discount and 6.5% sales tax: $Final_cart_total"
 echo ""
 echo "Enter your shipping info"
+echo "This is a school project. Don't use real information"
+echo ""
 read -p "First name: " first_name
 read -p "Last name: " last_name
 read -p "Email: " email
