@@ -63,8 +63,8 @@ read -p "Email: " email
 read -p "Address line 1: " address_1
 read -p "Address line 2: " address_2
 read -p "City: " city
-read -p "Country: " country
 read -p "State: " state
+read -p "Country: " country
 read -p "Zip code: " zip
 read -p "Phone number: " phone
 read -p "Is your shipping info correct? Enter yes to continue or no to redo: " correct_ship_info
