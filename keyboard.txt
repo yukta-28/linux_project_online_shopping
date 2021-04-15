@@ -1,3 +1,5 @@
-Logitech_G613=54.99
-Logitech_G815=151.99
-Apple_Magic=117.60
+Logitech_MK550_w/less=49.99
+Logitech_MKw20_series=27.99
+razer_blackwindow_V3m=139.99
+Redragon_s107_Gamming=34.99
+

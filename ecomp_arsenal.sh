@@ -1,14 +1,12 @@
 #!/bin/bash
 
-source ./func.sh
-source ./total.sh
-
+source ./ecomp_functions.sh
 clear
 
-figlet -c Ecomp Arsenal 
-
-echo "                  Computers & Electronics Online Store"
-echo "               *******************************************"
+echo -e "\n"
+figlet -c -f emboss2 Ecomp Arsenal
+echo "                     Computers & Electronics Online Store"
+echo "                **********************************************"
 echo                                     
 
 
@@ -71,33 +69,6 @@ do
   mother_model+=(${model})
   mother_price+=(${price})
 done<motherboard.txt
-
-
-# Starting main while loop
-
-List_Products(){
-cat products
-
-   read -p "Choose Product no. to browse: " product
-    
-   View_Models $product 
-   echo "      Action list" 
-   echo "------------------------"
-   echo "1)Add product"
-   echo "2)View Cart "
-   echo "3)Continue shopping "
-   echo "4)Exit "
-   read -p "Select action >> " action	
-   case $action in
-	   1)Add_Product $product;;
-           2)View_Cart;;
-	   3)List_Products;;
-	   4)echo "Thank You for shopping with us !!"
-             exit;;
-   esac
-
-}
-
 
 
 while :
